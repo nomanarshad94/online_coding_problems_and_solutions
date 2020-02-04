@@ -6,8 +6,11 @@ for i in range(n):
     name, number = input().split(' ')
     pb[name] = int(number)
 
-for i in range(n):
-    name = input()
+while True:
+    try:
+        name = input()
+    except:
+        break
     if name in pb.keys():
         print(name + "=" + str(pb[name]))
     else:
